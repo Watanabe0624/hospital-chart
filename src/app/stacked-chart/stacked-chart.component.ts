@@ -79,28 +79,12 @@ export class StackedChartComponent implements OnInit, AfterViewInit {
     this.drawChart(canvas, this.data);
   }
 
-  /*constructor() {
-    let items = this.hospitaldata.slice(0, 12);
-    for (let item of items) {
-      this.res1s.push(item.res1);
-      this.res2s.push(item.res2);
-    }
-    console.log(this.res1s);
-    console.log(this.res2s);
-  }*/
-
   ngOnInit() {
     let items = this.hospitaldata.slice(0, 12);
     for (let item of items) {
       this.res1s.push(item.res1);
       this.res2s.push(item.res2);
     }
-    console.log(this.res1s);
-    console.log(this.res2s);
-  }
-
-  tprint(x: number): void {
-    console.log(x);
   }
 
   changeChart(): void {
