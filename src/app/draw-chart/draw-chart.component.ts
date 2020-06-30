@@ -22,23 +22,16 @@ export class DrawChartComponent implements AfterViewInit, OnChanges {
   @Input() chartType: ChartType | string;
   @Input() chart: Chart;
 
-  public chartOptions: ChartOptions;
-
   ngAfterViewInit() {
     const canvas = this.myCanvas.nativeElement.getContext("2d");
     this.drawChart(canvas, this.chartData);
-  }
-
-  updateChart() {
-    this.chart.update();
-    console.log("a");
+    console.log(this.chartOption);
   }
   ngOnChanges(changes: SimpleChanges) {
-    /*if (changes.ChartOption) {
-      this.chartOptions = changes.ChartOption.currentValue;
+    if (changes.ChartOption) {
+      this.chartOption = changes.ChartOption.currentValue;
     }
-    console.log("aa");
-    this.updateChart();*/
+    //this.chart.updateChart();
   }
 
   drawChart(

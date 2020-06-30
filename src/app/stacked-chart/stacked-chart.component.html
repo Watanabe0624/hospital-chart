@@ -6,7 +6,8 @@
 </head>
 <body>
   <canvas #myCanvas width="400" height="250"></canvas>
-  <button (click)="changeChart()">Change</button>
+  <app-change-chart-type (changed)="changeChart()"></app-change-chart-type>
   <app-draw-chart [chartData]="data" [chartOption]="options" [chartType]="type" [chart]="chart"></app-draw-chart>
+
 </body>
 </html>

@@ -87,7 +87,7 @@ export class StackedChartComponent implements OnInit, AfterViewInit {
     }
   }
 
-  changeChart(): void {
+  changeChart() {
     if (this.chart.options.scales.xAxes[0].stacked === true) {
       this.chart.options.scales = {
         xAxes: [
